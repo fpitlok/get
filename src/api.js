@@ -90,9 +90,9 @@ class LineAPI {
   _qrCodeLogin() {
     this.setTHttpClient();
     return new Promise((resolve, reject) => {
-    this._client.getAuthQrcode(true, 'NINO-PC',(err, result) => {
+    this._client.getAuthQrcode(true, 'SelfBot By.Sai',(err, result) => {
       const qrcodeUrl = `line://au/q/${result.verifier}`;
-      console.info(`\n\nSilahkan Loginkan Link QR ini Untuk Mengambil TOKEN: ${qrcodeUrl}`)
+      console.info(`\n\nคัดลอกอลิ้งคืนี้ไปล็อคอิน ${qrcodeUrl}`)
       Object.assign(this.config.Headers,{ 'X-Line-Access': result.verifier });
         unirest.get('https://gd2.line.naver.jp/Q')
           .headers(this.config.Headers)
