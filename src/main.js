@@ -10,7 +10,7 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 class LINE extends LineAPI {
 
     get TokenBotLineKontol() {
-        const LineLonte = ['INI HANYA DIGUNAKAN UNTUK MENGAMBIL TOKEN BOT LINE.'];
+        const LineLonte = ['ระบบดึง Token LINE BoT'];
         return LineLonte; 
     }
          
